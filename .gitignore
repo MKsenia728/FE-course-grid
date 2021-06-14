@@ -1,0 +1,11 @@
+node_modules/
+# IntellijIdea files
+.idea/
+.DS_Store
+test*
+samples/
+libs/
+.csscomb.json
+.yarn*
+package*
+gulpfile.js

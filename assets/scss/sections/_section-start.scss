@@ -1,0 +1,126 @@
+.start {
+  width: 100%;
+
+  background-color: $color-gray-light;
+
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+  @include lg-md {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
+  }
+
+  &__container {
+    max-width: $ul;
+    margin: auto;
+    padding-right: $gap;
+    padding-left: $gap;
+
+    display: grid;
+    
+    @include lg-min {
+      gap: $gap * 5;
+      grid-template-areas: "art img";
+      grid-template-columns: 1fr 271px;
+    }
+    @include lg-md {
+      gap: $gap * 2;
+      grid-template-areas: "art img";
+      grid-template-columns: 1fr 271px;
+    }
+    @include md-sm {
+      gap: $gap;
+      grid-template-areas: "art img";
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm {
+      gap: $gap;
+      grid-template-areas: "art" "img";
+      grid-template-columns: 1fr;
+    }
+
+
+    // // @media (max-width: 576px) {
+    // //   .header-content__actions {
+    // //     align-items: center;
+    // //     flex-direction: column;
+    // //   }
+
+    // }
+  }
+
+  &__text {
+    grid-area: art;
+    letter-spacing: 0.055em;
+
+    line-height: 1.155;
+
+    p {
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+      @include lg {
+        font-size: 1rem;
+      }
+
+      &:first-of-type {
+        position: relative;
+        margin-top: -5px;
+
+        &::after {
+          position: absolute;
+          top: 0;
+         
+          width: 2px;
+          height: 200px;
+          content: "";
+          background-color: rgba(99, 117, 136, 0.1);
+          
+          @include lg-min {
+            right: (0 - $gap * 5 / 2);
+          }
+          @include lg-md {
+            right: (0 - $gap * 2 / 2);
+          }
+          @include md-sm {
+            right: (0 - $gap * 1 / 2);
+          }
+          @include sm {
+            display: none;
+
+          }
+        }
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: img;
+    object-fit: cover;
+
+    img {
+      max-width: 100%;
+      @include md-min {
+        height: 480px;
+      }
+      @include md-sm {
+        height: 418px;
+      }
+      @include sm {
+        height: 480px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+// .header-navbar__button {
+//   //
+// }
+.header-navbar {
+  &__button {
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: 25px 0 25px auto;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+
+      transform: rotate(0deg);
+
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 9px;
+      }
+      &:nth-child(3) {
+        top: 18px;
+      }
+    }
+    &--active span:nth-child(1) {
+      top: 9px;
+
+      transform: rotate(135deg);
+    }
+    &--active span:nth-child(2) {
+      opacity: 0;
+      left: -30px;
+    }
+    &--active span:nth-child(3) {
+      top: 9px;
+
+      transform: rotate(-135deg);
+    }
+  }
+  &__list {
+    
+
+    @include md-min {
+      @include unlist(0 -20px 0 0);
+      display: grid;
+      justify-content: end;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    @include md {
+      display: none;
+      &--active {
+        @include unlist;
+        display: block;
+        background-color: rgba($color-gray-dark, 0.9);
+        @include box-shadow;
+        position: absolute;
+        top: 100%;
+        right: $gap;
+        text-align: right;
+      }
+    }
+    
+  }
+
+  &__item {
+    @include md-min {
+      margin: 0 $gap / 2;
+    }
+    @include md {
+      margin: $gap $gap / 2;
+    }
+    
+  }
+
+  &__link {
+    display: block;
+    @include md-min {
+    padding: $gap / 2;
+  }
+  @include md {
+    padding: ($gap / 2) $gap;
+  }
+    transition: color 0.5s;
+    letter-spacing: 0.088em;
+
+    font-size: 1.125rem;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}

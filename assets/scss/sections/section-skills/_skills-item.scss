@@ -1,0 +1,71 @@
+
+.skills-item {
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: $color-primary;
+  
+  &:hover,
+  &:focus {
+    .skills-item__link {
+      color: $color-accent;
+    }
+    .skills-item__img {
+      transform: scale(1.1);
+    }
+    .skills-item__overlay {
+      opacity: 0.95;
+    }
+  }
+  
+  &__title {
+    @include abs-pos;
+    z-index: 1;
+
+    margin: 0;
+    
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 100%;
+    height: 100%;
+    padding: $gap;
+  
+    transition: color 0.5s;
+    letter-spacing: 0.1em;
+  
+  
+  }
+  &__img {
+    @include abs-pos;
+  
+    transition: transform 0.5s;
+  
+    background-image: url(../img/img-html.png);
+    background-position: center;
+    background-size: cover;
+  }
+  &__overlay {
+    @include abs-pos;
+  
+    transition: opacity 0.5s;
+  }  
+}
+
+@for $i from 1 through 9 {
+  
+  .skills-item:nth-child(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

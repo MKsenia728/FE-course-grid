@@ -1,0 +1,142 @@
+.posts {
+  @include lg-min {
+    margin-top: $gap * 5;
+    margin-bottom: $gap * 5;
+  }
+  @include lg-md {
+    margin-top: $gap * 4;
+    margin-bottom: $gap * 4;
+  }
+  @include md {
+    margin-top: $gap * 3;
+    margin-bottom: $gap * 3;
+  }
+
+  
+  &__container {
+    max-width: $ul;
+    margin: auto;
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+  &__grid-container {
+    display: grid;
+  
+    padding-bottom: $gap;
+  
+    gap: $gap;
+    @include lg-min {
+      grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+    grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+    grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+    grid-template-columns: 1fr;
+    }
+  }
+  &__actions {
+
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+.posts-item {
+  background-color: #f2f2f2;
+  transform: backgroud-color 0.5s;
+
+  &__link {
+    display: grid;
+    overflow: hidden;
+    
+    height: 100%;
+  
+    grid-template-rows: 300px 1fr; 
+    
+  }
+  &__img {
+    overflow: hidden;
+    
+    // height: 300px;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: color 0.5s;
+    color: $color-gray;
+    width: 100%;
+    // min-height: 240px;
+    padding: $gap;
+    // letter-spacing: 0.005em;
+    // line-height: 1.25;
+ 
+    h3 {
+      text-align: center;
+      
+    
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+    }
+    p {
+      text-align: center;
+    
+      
+    
+      
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: #d8d8d8;
+    .posts-item__img img{
+      transform: scale(1.1);
+    }
+    .posts-item__info {
+      color: $color-primary;
+    }
+    
+    
+  }
+
+}
+
+
+.posts-item:nth-child(1) {
+  grid-area: p1;
+}
+
+.posts-item:nth-child(2) {
+  grid-area: p2;
+}
+
+.posts-item:nth-child(3) {
+  grid-area: p3;
+}
+
+.posts-item:nth-child(4) {
+  grid-area: p4;
+}
+
+.posts-item:nth-child(5) {
+  grid-area: p5;
+}
+
+.posts-item:nth-child(6) {
+  grid-area: p6;
+}
