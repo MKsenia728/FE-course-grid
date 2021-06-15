@@ -4,7 +4,6 @@ node_modules/
 .DS_Store
 test*
 samples/
-libs/
 .csscomb.json
 .yarn*
 package*

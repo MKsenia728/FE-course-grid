@@ -1,46 +1,44 @@
 .form {
   width: 100%;
   padding: 30px 0 30px 0;
+
   background-color: $color-primary;
-  
+
   &__container {
-    max-width: $ul;
-    margin: auto;
-    padding-right: $gap;
-    padding-left: $gap;
-    
     display: grid;
-  
-    gap: $gap;
-    // grid-template-areas: "nm em bt";
     
+    @extend %container;
+
+    gap: $gap;
+   
     @include md-min {
       grid-template-areas: "nm em bt";
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
       grid-template-areas: "nm nm" "em bt";
-       grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     @include sm {
       grid-template-areas: "nm" "em" "bt";
-      // grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
     }
   }
-  
+
   .button--basic {
     width: 100%;
-    grid-area: bt;
-  
+
     color: $color-light;
     border-color: rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.2);
     background-color: rgba($color-light, 0.1);
-    /* transition: background-color 0.5s, border-color 0.5s; */
-    
+
+    grid-area: bt;
+
     &:hover,
     &:focus {
       cursor: pointer;
+
       border: 2px solid $color-light;
       background-color: $color-accent;
     }
@@ -48,7 +46,6 @@
 }
 
 .form-field {
- 
   &:nth-child(1) {
     grid-area: nm;
   }
@@ -57,19 +54,20 @@
   }
   &__input {
     display: block;
-   
+
     width: 100%;
     height: 60px;
     padding-right: 30px;
     padding-left: 30px;
+
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
-  
-    
+
+    color: $color-light;
     border: 2px solid rgba($color-light, 0);
     border-bottom: 2px solid rgba($color-light, 0.25);
     background-color: rgba($color-light, 0.05);
-    // color: color-light;
+
     font-size: 1.125rem;
     &::placeholder {
       color: $color-gray;
@@ -81,9 +79,7 @@
       &::placeholder {
         color: lighten($color-gray, 10%);
       }
-      // color: lighten($color-primary, 100%);
     }
-    color: $color-light;
   }
 } 
 

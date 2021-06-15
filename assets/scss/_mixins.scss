@@ -6,9 +6,10 @@
   left: $l;
 }
 @mixin unlist($m: 0, $p:0) {
-  list-style: none;
   margin: $m;
   padding: $p;
+
+  list-style: none;
 }
 @mixin  box-shadow {
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);

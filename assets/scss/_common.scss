@@ -10,72 +10,67 @@ html {
 
   color: $color-gray;
 
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-family: $font-main;
+  font-size: $font-size;
 }
 h1 {
   text-align: center;
-  // letter-spacing: 0.09em;
-
-  font-family: "Roboto Slab", serif;
-  
+  font-family: $font-header;
   font-weight: 300;
   line-height: 1.2;
-  
+
   @include lg-min {
-      font-size: 3.75rem;
-      letter-spacing: 0.08em;
+    letter-spacing: 0.08em;
+
+    font-size: 3.75rem;
   }
   @include lg-md {
-      font-size: 2.5rem;
-      letter-spacing: 0.075em;
+    letter-spacing: 0.075em;
+
+    font-size: 2.5rem;
   }
   @include md {
-      font-size: 1.875rem;
-      letter-spacing: 0.067em;
+    letter-spacing: 0.067em;
+
+    font-size: 1.875rem;
   }
-  
-//   @media (max-width: 992px) {
-//       font-size: 2.5rem;
-//       letter-spacing: 0.08em;
-//   }
-//   @media (max-width: 768px) {
-//     font-size: 1.88rem;
-//     letter-spacing: 0.07em;
-// }
+
 }
 h2 {
   margin-top: 0;
-  
 
   letter-spacing: 0.1em;
 
   color: $color-primary;
 
-  font-family: "Roboto Slab", serif;
-  
+  font-family: $font-header;
   font-weight: 700;
   line-height: 1.2;
+
   @include lg-min {
-    font-size: 2.5rem;
     margin-bottom: 56px;
+
+    font-size: 2.5rem;
   }
   @include lg-md {
-    font-size: 2rem;
     margin-bottom: 42px;
+
+    font-size: 2rem;
   }
   @include md-sm {
-    font-size: 1.5rem;
     margin-bottom: 36px;
+
+    font-size: 1.5rem;
   }
   @include sm {
-    font-size: 1.5rem;
     margin-bottom: 36px;
+
     text-align: center;
+
+    font-size: 1.5rem;
   }
-  
 }
- 
+
 h3 {
   letter-spacing: 0.05em;
 
@@ -93,35 +88,40 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
 }
 .button--light {
   border: 2px solid $color-light;
   background-color: rgba($color-light, 0.1);
-  
+
   @include lg-min {
     width: 250px;
-    font-size: 1.125rem;
     height: 60px;
-}
-@include lg-md {
-  width: 200px;
-  height: 50px;
-  font-size: 1rem;
-}
-@include md {
-  width: 170px;
-  height: 40px;
-  font-size: 1rem;
-} 
+
+    font-size: 1.125rem;
+  }
+  @include lg-md {
+    width: 200px;
+    height: 50px;
+
+    font-size: 1rem;
+  }
+  @include md {
+    width: 170px;
+    height: 40px;
+
+    font-size: 1rem;
+  }
 }
 .button--basic {
   height: 60px;
-  font-size: 1.125rem;
+
   border: 2px solid $color-primary;
   background-color: rgba($color-primary, 0.8);
+
+  font-size: 1.125rem;
+
   @include sm-min {
     width: 350px;
   }
