@@ -1,24 +1,27 @@
 .footer {
   width: 100%;
   padding: 50px 0 70px 0;
+
   background-color: $color-primary;
-  
-  &__container {  
-    @extend %container;
+
+  &__container {
     padding-top: 8px;
+
+    @extend %container;
   }
   &__list {
     display: flex;
     justify-content: center;
-    @include unlist;
+
     gap: $gap;
+    @include unlist;
   }
   &__link {
     transition: color 0.5s;
-  
+
     color: $color-light;
     background-color: $color-primary;
-  
+
     font-size: 2.25rem;
     &:hover,
     &:focus {
@@ -29,6 +32,7 @@
     width: 75px;
     height: 2.2px;
     margin: 25px auto 0 auto;
+
     background-color: rgba($color-light, 0.1);
   }
   &__end {
@@ -36,27 +40,24 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    
+    p:first-of-type {
+      margin-top: 20px;
+      margin-bottom: 0;
+      padding-left: 8px;
+
+      letter-spacing: 0.33em;
+
+      font-weight: 100;
+    }
+    p:last-of-type {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      letter-spacing: 0.05em;
+
+      color: $color-light;
+
+      font-weight: 700;
+    }
   }
-}
-
-.footer__end p:first-of-type {
-  margin-top: 20px;
-  margin-bottom: 0;
-  padding-left: 8px;
-
-  letter-spacing: 0.33em;
-
-  font-weight: 100;
-}
-
-.footer__end p:last-of-type {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  letter-spacing: 0.05em;
-
-  color: $color-light;
-
-  font-weight: 700;
 }

@@ -18,8 +18,8 @@
 
   &__container {
     display: grid;
-    @extend %container;
 
+    @extend %container;
     @include lg-min {
       gap: $gap * 5;
       grid-template-areas: "art img";

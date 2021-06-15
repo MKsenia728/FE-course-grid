@@ -6,11 +6,9 @@
 
   &__container {
     display: grid;
-    
-    @extend %container;
 
+    @extend %container;
     gap: $gap;
-   
     @include md-min {
       grid-template-areas: "nm em bt";
       grid-template-columns: repeat(3, 1fr);
@@ -81,5 +79,4 @@
       }
     }
   }
-} 
-
+}

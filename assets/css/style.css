@@ -870,10 +870,10 @@ input {
 }
 
 .posts-item {
-  -webkit-transform: backgroud-color 0.5s;
-      -ms-transform: backgroud-color 0.5s;
-          transform: backgroud-color 0.5s;
   background-color: #f2f2f2;
+  -webkit-transition: backgroud-color 0.5s;
+  -o-transition: backgroud-color 0.5s;
+  transition: backgroud-color 0.5s;
 }
 
 .posts-item__link {
@@ -983,10 +983,10 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 20px;
 }
 
 .footer__link {

@@ -46,9 +46,8 @@
 }
 
 .posts-item {
-  transform: backgroud-color 0.5s;
-
   background-color: #f2f2f2;
+  transition: backgroud-color 0.5s;
 
   &__link {
     display: grid;
