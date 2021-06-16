@@ -1288,7 +1288,7 @@ input {
     padding: 20px;
   }
   .skills__container {
-    gap: 10px;
+    gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
   .start__container {
