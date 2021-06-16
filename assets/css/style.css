@@ -372,6 +372,7 @@ html {
 
 h1 {
   text-align: center;
+  letter-spacing: 0.08em;
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   line-height: 1.2;
@@ -1092,7 +1093,6 @@ input {
 
 @media (min-width: 992px) {
   h1 {
-    letter-spacing: 0.08em;
     font-size: 3.75rem;
   }
   h2 {
@@ -1144,7 +1144,6 @@ input {
 
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
-    letter-spacing: 0.075em;
     font-size: 2.5rem;
   }
   h2 {
@@ -1187,12 +1186,12 @@ input {
 
 @media (max-width: 767.8px) {
   h1 {
-    letter-spacing: 0.067em;
     font-size: 1.875rem;
   }
   .button--light {
     width: 170px;
     height: 40px;
+    letter-spacing: 0.05em;
     font-size: 1rem;
   }
   .header-menu {
@@ -1282,6 +1281,15 @@ input {
   }
   .button--basic {
     width: 100%;
+  }
+  .header-content__actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .skills {
     margin-bottom: 0;

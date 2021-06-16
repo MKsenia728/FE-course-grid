@@ -15,24 +15,18 @@ html {
 }
 h1 {
   text-align: center;
-
+  letter-spacing: 0.08em;
   font-family: $font-header;
   font-weight: 300;
   line-height: 1.2;
 
   @include lg-min {
-    letter-spacing: 0.08em;
-
     font-size: 3.75rem;
   }
   @include lg-md {
-    letter-spacing: 0.075em;
-
     font-size: 2.5rem;
   }
   @include md {
-    letter-spacing: 0.067em;
-
     font-size: 1.875rem;
   }
 }
@@ -111,6 +105,7 @@ input {
   @include md {
     width: 170px;
     height: 40px;
+    letter-spacing: 0.05em;
 
     font-size: 1rem;
   }
