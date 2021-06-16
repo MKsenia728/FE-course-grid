@@ -68,6 +68,7 @@
       display: none;
       &--active {
         position: absolute;
+        z-index: 100;
         top: 100%;
         right: $gap;
 
